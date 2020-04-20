@@ -1,0 +1,40 @@
+import Router from 'vue-router'
+import vue from  'vue'
+const index = () => import('../views/index/index')
+const messageBord = ()=> import('../views/messageBorc/bord')
+const pro = ()=> import('../views/pro/profile')
+const freeSkill = ()=> import('../views/freeskill/freeSkill')
+
+vue.use(Router)
+const routes=[
+    {
+        path:'/',
+        redirect:'/index'
+    },
+    {
+        path:'/index',
+        component:index
+    },
+    {
+        path:"/messageBord",
+        component:messageBord
+    },
+    {
+        path:"/profile",
+        component:pro
+    }
+    ,
+    {
+        path:"/freeSkill",
+        component:freeSkill
+    }
+
+
+]
+const router = new Router({
+    routes,
+    mode:'history'
+
+})
+
+export default router
