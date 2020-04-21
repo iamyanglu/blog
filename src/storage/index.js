@@ -3,7 +3,8 @@ import vue from 'vue'
 vue.use(vuex)
 const storage =new vuex.Store({
     state:{
-        bgcColor:'#ffffff'
+        bgcColor:'#ffffff',
+        page:0
     },
     mutations:{
         changeColor(state){
@@ -19,6 +20,11 @@ const storage =new vuex.Store({
                 document.body.style.backgroundColor=   state.bgcColor
             }
 
+
+        },
+        changePage(state,number)
+        {
+           state.page=number
 
         }
     },

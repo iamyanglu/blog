@@ -1,9 +1,11 @@
 import Router from 'vue-router'
 import vue from  'vue'
+import backEnd from "../views/backend/backEnd";
 const index = () => import('../views/index/index')
 const messageBord = ()=> import('../views/messageBorc/bord')
 const pro = ()=> import('../views/pro/profile')
 const freeSkill = ()=> import('../views/freeskill/freeSkill')
+
 
 vue.use(Router)
 const routes=[
@@ -27,6 +29,10 @@ const routes=[
     {
         path:"/freeSkill",
         component:freeSkill
+    },
+    {
+        path:"/backend",
+        component:backEnd
     }
 
 

@@ -29,6 +29,7 @@
         methods:{
             btnClick(){
 
+
                 this.$router.push(this.link)
             }
         }
@@ -44,6 +45,7 @@
     flex: 1;
     width:50px;
     height: 49px;
+    display: inline-block;
 
 }
 </style>

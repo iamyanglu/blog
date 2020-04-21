@@ -34,7 +34,9 @@
 <style scoped>
 
 #navbar{
-    position: relative;
+    position: fixed;
+    top: 0;
+    z-index: 999;
     width: 100%;
     height: 49px;
     background-color:rgba(255,255,255,.6);
@@ -82,10 +84,7 @@
         width:25px;
         vertical-align: middle;
     }
-    .search{
-        margin: 10px;
 
-    }
 
 
 </style>
