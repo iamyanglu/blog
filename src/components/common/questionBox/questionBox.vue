@@ -1,5 +1,5 @@
 <template>
-    <div class="quesBoxItem" @click="">
+    <div class="quesBoxItem" @click="btnClick">
 
         <div class="tit"><h2>{{item.tit}}</h2></div>
         <div class="des">des:{{item.des}}</div>

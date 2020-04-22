@@ -33,7 +33,8 @@ const routes=[
     {
         path:"/backend",
         component:backEnd
-    }
+    },
+
 
 
 ]

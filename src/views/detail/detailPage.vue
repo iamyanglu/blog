@@ -1,12 +1,10 @@
 <template>
-    <div>
-        无敌了
-    </div>
+
 </template>
 
 <script>
     export default {
-        name: "deTailed"
+        name: "detailPage"
     }
 </script>
 
