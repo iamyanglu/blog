@@ -3,23 +3,24 @@
 
 
         <label>文章标题</label><input v-model="tit">
-        <mavon-editor v-model="handhook"/>
+        <mavon-editor v-model="handhook" ref = md />
         <label>文章描述</label><input v-model="des">
         <button @click="postart">发表</button>
-
+        <button @click="sho">显示</button>
     </div>
 </template>
 
 <script>
 import {putArt} from "../../network/putart";
 
+import {mavonEditor} from 'mavon-editor'
 
 export default {
         name: "backEnd",
         data(){
           return {
               tit:"",
-              handhook:"# dsajhdkj",
+              handhook:"",
               des:""
 
 
@@ -29,6 +30,10 @@ export default {
 
         },
         methods:{
+            sho(){
+
+
+            },
             postart(){
                 const artObj ={
                     tit:this.tit,
@@ -50,6 +55,7 @@ export default {
 
 <style scoped>
 .backend{
-    margin-top: 70px;
+    margin-top: 100px;
+
 }
 </style>

@@ -1,10 +1,14 @@
 <template>
+
     <div class="quesBoxItem" @click="btnClick">
 
-        <div class="tit"><h2>{{item.tit}}</h2></div>
-        <div class="des">des:{{item.des}}</div>
-        <div class="time">{{item.data | cheacktime}}</div>
+            <div class="tit"><h3>{{item.tit}}</h3></div>
+            <div class="des">des:{{item.des}}</div>
+            <div class="time">{{item.data | cheacktime}}</div>
+
+
     </div>
+
 </template>
 
 <script>
@@ -20,7 +24,8 @@
             cheacktime(data)
             {  const y = new Date(data).getFullYear()
                 const m = new Date(data).getMonth()+1
-                return y+'/'+m
+                const d = new Date(data).getDay()
+                return y+'/'+m + '/' + d
             }
         },
         components:{
@@ -30,6 +35,11 @@
             return {
 
             }
+        },
+        methods:{
+            btnClick(){
+                this.$router.push('/detail/'+this.item._id)
+            }
         }
 
     }
@@ -37,18 +47,38 @@
 
 <style scoped>
 .quesBoxItem{
-    padding-top: 10px;
-    border-top: 1px solid black;
-    border-bottom: 1px solid black;
-    width: 500px;
-    height: 150px;
-    margin-bottom: 30px;
     position: relative;
+    width: 300px;
+    height: 125px;
+    padding-top: 10px;
+    margin:30px 20px 30px 0;
+    border-radius:9px;
+    border: 1px double black;
+
+    transition:transform 0.5s ;
+    cursor: pointer;
+    display: inline-block;
 }
+.quesBoxItem:hover{
+transform: translate(-10px,-10px);
+
+}
+.des{
+    margin-left: 10px;
+}
+.tit{
+    transition: all 1s;
+
+}
+
     .time{
         position: absolute;
         bottom: 5px;
         right: 20px;
         color: #666666;
     }
+
+
+
+
 </style>

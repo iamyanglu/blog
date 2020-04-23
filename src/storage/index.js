@@ -24,7 +24,7 @@ const storage =new vuex.Store({
         },
         changePage(state,number)
         {
-           state.page=number
+           state.page += number
 
         }
     },

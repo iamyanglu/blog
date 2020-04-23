@@ -34,12 +34,13 @@
 <style scoped>
 
 #navbar{
+
     position: fixed;
-    top: 0;
+    top:0px;
     z-index: 999;
     width: 100%;
     height: 49px;
-    background-color:rgba(255,255,255,.6);
+    background-color:rgb(255,255,255);
     border-bottom: 2px solid #eeeeee ;
 }
     .left,.right ,.center{

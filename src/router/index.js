@@ -5,6 +5,8 @@ const index = () => import('../views/index/index')
 const messageBord = ()=> import('../views/messageBorc/bord')
 const pro = ()=> import('../views/pro/profile')
 const freeSkill = ()=> import('../views/freeskill/freeSkill')
+const detail = ()=> import('../views/detail/detailPage')
+
 
 
 vue.use(Router)
@@ -34,6 +36,11 @@ const routes=[
         path:"/backend",
         component:backEnd
     },
+    {
+        path:"/detail/:id",
+        component:detail
+    },
+
 
 
 

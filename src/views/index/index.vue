@@ -1,21 +1,27 @@
 <template>
     <div class="index">
-        <main-index :artlist="artlist" @redPage="junP"></main-index>
+
+        <main-index :artlist="artlist" @redPage="junP" :totalArt=" totalArt"></main-index>
+        <id-card/>
+
     </div>
 </template>
 
 <script>
     import mainIndex from '@/components/comtent/mainIndexC'
     import {getIndexart} from "../../network/home";
+    import idCard from '@/components/comtent/idCard'
 
     export default {
         name: "index",
         components: {
-            mainIndex
+            mainIndex,
+            idCard
         },
         data: function () {
             return {
              artlist:[],
+                totalArt:0
 
             }
 
@@ -25,16 +31,28 @@
                 getIndexart({url: '/getart?page='+this.$store.state.page}).then(res=>{
                     this.artlist = res.data
 
+
                 })
 
             },
-            junP(data){
-                this.$store.commit('changePage',data)
+            junP(){
+
                this.getArtList()
+            },
+            getTotal(){
+
+                getIndexart({url:'/gettoTalart'}).then(res =>{
+
+                    this.totalArt = parseInt(res.data)
+                    console.log(this.totalArt);
+
+                })
             }
         },
+
         created() {
                 this.getArtList()
+                this.getTotal()
         }
 
     }
