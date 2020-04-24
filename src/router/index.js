@@ -13,7 +13,7 @@ vue.use(Router)
 const routes=[
     {
         path:'/',
-        redirect:'/index'
+        redirect:'/profile'
     },
     {
         path:'/index',

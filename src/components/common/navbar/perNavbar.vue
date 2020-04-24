@@ -67,7 +67,7 @@
         height: 49px;
         }
     .center{
-
+        font-size: 10px;
         width: 40%;
         min-width: 500px;
         left: 30%;
