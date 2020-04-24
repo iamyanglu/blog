@@ -3,7 +3,9 @@
 
         <qusetion-box  v-for="item in artlist" :item="item"></qusetion-box>
 
-        <bot :number="totalArt" @sendPage="rediPage"></bot>
+
+        <bot :number="totalArt" @sendPage="rediPage" v-if="totalArt > 0"></bot>
+
     </div>
 </template>
 

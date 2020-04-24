@@ -2,7 +2,7 @@
     <div class="index">
 
         <main-index :artlist="artlist" @redPage="junP" :totalArt=" totalArt"></main-index>
-        <id-card/>
+
 
     </div>
 </template>

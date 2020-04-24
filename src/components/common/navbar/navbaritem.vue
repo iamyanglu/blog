@@ -39,11 +39,11 @@
 <style scoped>
 
     .item{
-
+    width: 20%;
     line-height: 49px;
     cursor: pointer;
     flex: 1;
-    width:50px;
+
     height: 49px;
     display: inline-block;
 

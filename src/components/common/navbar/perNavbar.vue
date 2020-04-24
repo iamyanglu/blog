@@ -42,9 +42,11 @@
     height: 49px;
     background-color:rgb(255,255,255);
     border-bottom: 2px solid #eeeeee ;
+
 }
     .left,.right ,.center{
 
+        font-size:14px;
        display: inline-block;
     }
     .left{
@@ -58,7 +60,6 @@
 
     .right{
         display: inline-block;
-
         width: 20%;
         height: 100%;
         position: fixed;
@@ -66,9 +67,9 @@
         height: 49px;
         }
     .center{
+
         width: 40%;
-
-
+        min-width: 500px;
         left: 30%;
         position: fixed;
         display: flex inline;
