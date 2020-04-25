@@ -46,6 +46,9 @@
 
     height: 49px;
     display: inline-block;
-
+    transition: all 0.25s;
 }
+    .item:hover{
+        font-size: 15px;
+    }
 </style>

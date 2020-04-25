@@ -35,15 +35,12 @@
 .mainBox{
     margin-top: 50px;
     margin-left: 10%;
-    width: 900px;
+    width:80%;
     display: inline-block;
+   display: flex;
+   flex-wrap: wrap;
+    justify-content: center;
 
-
-
-
-
-
-    text-align: center;
 }
 
 </style>

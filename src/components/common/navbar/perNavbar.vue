@@ -34,7 +34,7 @@
 <style scoped>
 
 #navbar{
-
+    display: flex;
     position: fixed;
     top:0px;
     z-index: 999;
@@ -51,25 +51,23 @@
     }
     .left{
 
-        vertical-align: middle;
+       padding-left: 20px;
         width: 27%;
-        margin-left: 2%;
+
         height: 49px;
-        line-height: 49px;
+      line-height: 49px;
     }
 
     .right{
         display: inline-block;
         width: 20%;
         height: 100%;
-        position: fixed;
-        right: 0;
-        height: 49px;
+        margin-left: auto;
         }
     .center{
-        font-size: 14px;
+        font-size: 0.8em;
         width: 40%;
-        min-width: 500px;
+
         left: 30%;
         position: fixed;
         display: flex inline;
@@ -77,7 +75,7 @@
     }
 .left img{
         width: 20px;
-    vertical-align: middle
+         vertical-align: middle
     }
     .left img:hover{
         background-color: #eeeeee;

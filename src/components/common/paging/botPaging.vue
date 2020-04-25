@@ -52,9 +52,8 @@
 
 <style scoped>
 .bot{
-   
-
-
+   width: 100%;
+display: block;text-align: center;
 height: 60px;
 
 

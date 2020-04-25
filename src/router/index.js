@@ -6,6 +6,7 @@ const messageBord = ()=> import('../views/messageBorc/bord')
 const pro = ()=> import('../views/pro/profile')
 const freeSkill = ()=> import('../views/freeskill/freeSkill')
 const detail = ()=> import('../views/detail/detailPage')
+const log = ()=> import('../views/log/log')
 
 
 
@@ -16,8 +17,10 @@ const routes=[
         redirect:'/profile'
     },
     {
+        name:'index',
         path:'/index',
-        component:index
+        component:index,
+
     },
     {
         path:"/messageBord",
@@ -40,6 +43,10 @@ const routes=[
         path:"/detail/:id",
         component:detail
     },
+    {
+        path:"/log",
+        component:log
+    },
 
 
 
@@ -47,8 +54,21 @@ const routes=[
 ]
 const router = new Router({
     routes,
-    mode:'history'
+    mode:'history',
 
 })
+router.beforeEach((to,frome,next)=>{
+    const neeDlog=['/freeSkill']
+    console.log(to.fullPath);
+    if(neeDlog.indexOf(to.fullPath) > -1)
+     {
+         next('/log')
+     }
+     else {
+         next()
+     }
+
+})
+
 
 export default router

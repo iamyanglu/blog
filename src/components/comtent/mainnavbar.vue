@@ -5,8 +5,6 @@
             <div slot="left_on"><img src="~@/assets/img/light.png"></div>
             <navbar-item v-for="item in list" slot="center" :text="item.txt" :link="item.link">
             </navbar-item>
-
-
         </navbar>
     </div>
 </template>
@@ -24,10 +22,10 @@
             return {
                 list:[
                     {txt:'首页',link:'/index'},
-                    {txt:'给我留言',link:'/messageBord'},
-                    {txt:'个人简介',link:'/profile'},
-                    {txt:'福利专区',link:'/freeSkill'},
-                    {txt:'后台管理',link:'/backend'}
+                    {txt:'留言',link:'/messageBord'},
+                    {txt:'简介',link:'/profile'},
+                    {txt:'工具',link:'/freeSkill'},
+                    {txt:'文章',link:'/backend'}
                 ]
             }
         }

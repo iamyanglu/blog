@@ -15,7 +15,6 @@
             <span>&#8226;</span>
             <div v-html="github"></div>
             <span>&#8226;</span>
-
         </div>
         <div class="skilldiv">
             <div class="skillList" v-html="skillList">
@@ -35,12 +34,12 @@
             skillList(){
                 let str1 = this.skilllist
                 let r = str1.match(/@.*?-/ig)
-                console.log(r);
+
                 for (let index =0;index<r.length;index++)
                 {
                     str1 =str1.replace(r[index],'<a style="color: red">'+r[index]+ '</a>')
                 }
-                console.log(str1);
+
                 str1 = str1.replace(/@/ig,'')
                 str1 = str1.replace(/-/ig,'')
                 return str1

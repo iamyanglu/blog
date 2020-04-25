@@ -48,26 +48,30 @@
 <style scoped>
 .quesBoxItem{
     position: relative;
+    display: flex;
+    flex-wrap: wrap;
     width: 300px;
     height: 125px;
     padding-top: 10px;
     margin:30px 20px 30px 0;
     border-radius:9px;
     border: 1px double black;
-
     transition:transform 0.5s ;
     cursor: pointer;
-    display: inline-block;
+    text-align: center;
+
 }
 .quesBoxItem:hover{
 transform: translate(-10px,-10px);
 
 }
 .des{
-    margin-left: 10px;
+
+    width: 100%;
 }
 .tit{
-    transition: all 1s;
+    width: 100%;
+
 
 }
 
