@@ -17,16 +17,35 @@
             <span>&#8226;</span>
 
         </div>
-        <div class="skillList">
-            {{skillList}}
+        <div class="skilldiv">
+            <div class="skillList" v-html="skillList">
 
+            </div>
         </div>
+
     </div>
 </template>
 
 <script>
     export default {
         name: "profile",
+
+        computed:{
+
+            skillList(){
+                let str1 = this.skilllist
+                let r = str1.match(/@.*?-/ig)
+                console.log(r);
+                for (let index =0;index<r.length;index++)
+                {
+                    str1 =str1.replace(r[index],'<a style="color: red">'+r[index]+ '</a>')
+                }
+                console.log(str1);
+                str1 = str1.replace(/@/ig,'')
+                str1 = str1.replace(/-/ig,'')
+                return str1
+            }
+        },
         data(){
             return{
                 name:"姓名 : 杨璐",
@@ -35,8 +54,8 @@
                 email:"邮箱地址:499339182@qq.com",
                 blog:"<a href='http://49.235.121.158:80' target='view_window'>博客地址：http://49.235.121.158:80</a>",
                 github:"<a href='http://www.github.com/iamyanglu' target='view_window'>github:http://www.github.com/iamyanglu</a>",
-                skillList:`技术栈 ：html,css,js  使用 vue-cli进行vue前端开发.掌握 vuex ，vue-router，promise，axios，掌握基本es6语法和简单高阶函数，webpack基本打包知识,使用node中express进行简单api编写
-                ，掌握node操作mongodb基本知识。`
+                skilllist:'技术栈 ：@html-,@css-,@js-  使用 vue-cli进行@vue-前端开发.掌握 @vuex- ，@vueRouter-，@promise-，@axios-，掌握基本es6语法和简单高阶函数，' +
+                    'webpack基本打包知识,使用node中express进行简单api编写，掌握@node-操作@mongodb-基本知识.'
             }
         }
     }
@@ -85,12 +104,20 @@ span.pro_img img:hover{
         border-left: 1px solid black;
         height: 20px;
         line-height: 20px;
+
+    }
+
+    .skilldiv{
+        width: 100%;
     }
     .skillList{
-        text-align: center;
-        margin-top: 50px;
+        margin: 20px auto;
+        width: 80%;
+        cursor: pointer;
         font-size: 14px;
         color: #000;
-        display: flex;
     }
+
+
+
 </style>
