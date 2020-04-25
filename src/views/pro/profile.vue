@@ -9,6 +9,8 @@
             <span>&#8226;</span>
             <div v-html="work"></div>
             <span>&#8226;</span>
+            <div v-html="email"></div>
+            <span>&#8226;</span>
             <div v-html="blog"> </div>
             <span>&#8226;</span>
             <div v-html="github"></div>
@@ -30,9 +32,10 @@
                 name:"姓名 : 杨璐",
                 stu:"学历 : 大学本科在读",
                 work:"工作经验 : 暂无",
-                blog:"<a href='http://49.235.121.158:80'>博客地址：http://49.235.121.158:80</a>",
-                github:"<a href='http://www.github.com/iamyanglu'>github:http://www.github.com/iamyanglu</a>",
-                skillList:`技术栈 ：html,css,js  使用 vue-cli进行vue前端开发.掌握 vuex ，vue-router，promise，axios，掌握基本es6语法和简单高阶函数，使用node中express进行简单api编写
+                email:"邮箱地址:499339182@qq.com",
+                blog:"<a href='http://49.235.121.158:80' target='view_window'>博客地址：http://49.235.121.158:80</a>",
+                github:"<a href='http://www.github.com/iamyanglu' target='view_window'>github:http://www.github.com/iamyanglu</a>",
+                skillList:`技术栈 ：html,css,js  使用 vue-cli进行vue前端开发.掌握 vuex ，vue-router，promise，axios，掌握基本es6语法和简单高阶函数，webpack基本打包知识,使用node中express进行简单api编写
                 ，掌握node操作mongodb基本知识。`
             }
         }
@@ -88,5 +91,6 @@ span.pro_img img:hover{
         margin-top: 50px;
         font-size: 14px;
         color: #000;
+        display: flex;
     }
 </style>
